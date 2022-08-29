@@ -36,13 +36,14 @@ for (int i = 0; i < row; i++)
      Console.WriteLine();
 }
 
-float[] massiv = new float[col];// массив для вывода суммы элементов столбца
+double[] massiv = new double[col];// массив для вывода суммы элементов столбца
 for (int j = 0; j < col; j++)
 	{
-	   float sumcol = 0;
+	   double sumcol = 0;
 	  for (int i = 0; i < row; i++)
 	    sumcol +=Array[i,j];
-        massiv [j] =sumcol/row;
-     Console.Write($"S={massiv[j]}\t");
+        massiv [j] =sumcol/row;//средняя арифметическая сумма 
+        double summa=Math.Round( massiv [j],1); // округление средней ариф.суммы
+     Console.Write($"S={summa}\t");
   
-} 
+}  
